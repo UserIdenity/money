@@ -1,0 +1,25 @@
+printidenity ()
+
+--[[
+	By Pre-Hacker
+]]
+game:GetService("StarterGui"):SetCore("SendNotification",{
+Title = "Pre-Hacker!",
+Text = "Script Executed!", 
+
+Button1 = "Yes",
+Button2 = "Cancel",
+Duration = 30 
+})
+
+print ("By Pre-hacker.")
+
+local player = game.Players:FindFirstChid('Player')
+if player and player:FindFirstChid('leaderstats') and Player.leaderstats:FindFirtsChid
+    player.leaderstats.Money.Value = 1e12
+end
+
+local stats = game.Players.Player.leaderstats
+stats.Money.Value = 9999999999
+
+local stats = game.Players.Exalystic.leaderstats stats.Cash.Value = 1000
