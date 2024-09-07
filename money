@@ -14,12 +14,50 @@ Duration = 30
 
 print ("By Pre-hacker.")
 
-local player = game.Players:FindFirstChid('Player')
-if player and player:FindFirstChid('leaderstats') and Player.leaderstats:FindFirtsChid
-    player.leaderstats.Money.Value = 1e12
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+frame.Name = "frame"
+frame.Parent = ScreenGui
+frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+frame.BackgroundTransparency = 1.000
+frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderSizePixel = 0
+frame.Position = UDim2.new(0.00841750856, 0, 0.809294879, 0)
+frame.Size = UDim2.new(0, 120, 0, 109)
+
+ImageLabel.Parent = frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(0.0666666701, 0, 0.00917431153, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 100)
+ImageLabel.Image = "rbxassetid://124994115161672"
+
+-- Scripts:
+
+local function FNLO_fake_script() -- ImageLabel.Script 
+	local script = Instance.new('Script', ImageLabel)
+
+	local gui = script.Parent
+	while task.wait(.005) do
+		script.Parent.Rotation += 1
+		if gui.Rotation == 360 then
+			gui.Rotation = 0
+		end
+	end
+	
 end
-
-local stats = game.Players.Player.leaderstats
-stats.Money.Value = 9999999999
-
-local stats = game.Players.Exalystic.leaderstats stats.Cash.Value = 1000
+coroutine.wrap(FNLO_fake_script)()
